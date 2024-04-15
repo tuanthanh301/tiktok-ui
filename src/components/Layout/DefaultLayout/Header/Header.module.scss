@@ -3,10 +3,12 @@
     height: var(--default-layout-header-height);
     display: flex;
     justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px;
     --search-border-radius: 92px;
     --search-height: 46px;
     --search-top-spacer: 9px;
     --search-bottom-width: 52px;
+    // background-color: gray;
 }
 .inner{
     width: var(--default-layout-width);
@@ -17,7 +19,11 @@
 }
 .logo{
     
-}   
+}  
+.search, 
+.search-result{
+    width: 361px;
+} 
 .search{
     position: relative;
     width: 361px;

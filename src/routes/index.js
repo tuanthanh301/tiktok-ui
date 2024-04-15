@@ -1,14 +1,16 @@
-// import Following from "./src/pages/Following";
-// import Home from "./src/pages/Home";
-// import Profile from "./src/pages/Profile";
+import Following from "~/pages/Following";
+import Home from "~/pages/Home";
+import Profile from "~/pages/Profile";
 
 
-// // Public routes
-// const publicRoutes = [
-//     { path: '/', component: Home},
-//     { path: '/following', component: Following},
-//     { path: '/profile', component: Profile}
-// ];
-// const privateRoutes = [];
+// Public routes
+const publicRoutes = [
+    { path: '/', component: Home},
+    { path: '/following', component: Following},
+    { path: '/profile', component: Profile}
+    // { path: '/upload', component: UpLoad}
 
-// export { publicRoutes, privateRoutes };
+];
+const privateRoutes = [];
+
+export { publicRoutes, privateRoutes };

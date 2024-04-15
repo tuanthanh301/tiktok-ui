@@ -5,6 +5,7 @@ const cx = classNames.bind(styles);
 const Sidebar = () => {
   return (
     <aside className={cx('wrapper')}>
+      SideBar
     </aside>
   )
 }

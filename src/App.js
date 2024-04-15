@@ -1,26 +1,24 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { DefaultLayout } from './Layout';
+import { DefaultLayout } from './components/Layout';
 // import { DefaultLayout } from './Layout';
-import UpLoad from './Layout/DefaultLayout/Upload';
+import UpLoad from './components/Layout/DefaultLayout/Upload';
 import Following from './pages/Following';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
+import { publicRoutes } from './routes';
 
 const App = () => {
     return (
         <Router>
             <div className="App">
-                <DefaultLayout>
-                    <Home/>
-                </DefaultLayout>
                 <div className="screens-section-container">
                     <Routes>
-                        <Route path="/" element={<Home />} />
+                        {/* <Route path="/" element={<Home />} />
                         <Route path="/following" element={<Following />} />
                         <Route path="/profile" element={<Profile />} />
-                        <Route path="/upload" element={<UpLoad />} />
+                        <Route path="/upload" element={<UpLoad />} /> */}
 
-                        {/* {publicRoutes.map((route, index) => {
+                        {publicRoutes.map((route, index) => {
                         const Layout = route.layout || DefaultLayout;
                         const Page = route.component;
                         return (
@@ -34,7 +32,7 @@ const App = () => {
                                 }
                             />
                         );
-                    })} */}
+                    })}
                     </Routes>
                 </div>
             </div>
