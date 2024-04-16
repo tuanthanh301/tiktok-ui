@@ -1,10 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { DefaultLayout } from './components/Layout';
 // import { DefaultLayout } from './Layout';
-import UpLoad from './components/Layout/DefaultLayout/Upload';
-import Following from './pages/Following';
-import Home from './pages/Home';
-import Profile from './pages/Profile';
 import { publicRoutes } from './routes';
 
 const App = () => {

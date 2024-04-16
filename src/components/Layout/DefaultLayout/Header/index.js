@@ -5,7 +5,7 @@ import images from '~/assets/images';
 import Tippy from '@tippyjs/react/headless';
 import Button from '~/components/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faMagnifyingGlass, faSignIn } from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark, faEllipsisVertical, faMagnifyingGlass, faSignIn } from '@fortawesome/free-solid-svg-icons';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
 const cx = classNames.bind(styles);
@@ -31,11 +31,7 @@ const Header = () => {
                             <PopperWrapper>
                                 <h4 className={cx('search-title')}>Account</h4>
                                 <AccountItem />
-                                <AccountItem />
-                                <AccountItem />
-                                <AccountItem />
                             </PopperWrapper>
-                            ˝
                         </div>
                     )}
                 >
@@ -52,7 +48,24 @@ const Header = () => {
                 </Tippy>
                 <div className={cx('action')}>
                     <Button text>UpLoad</Button>
-                    <Button rounded rightIcon={<FontAwesomeIcon icon={faSignIn}/>}>Log in</Button>
+                    <Button primary rightIcon={<FontAwesomeIcon icon={faSignIn} />}>Log in</Button>
+                    {/* <Tippy
+                        interactive
+                        visible={searchResult.length > 0}
+                        render={(attrs) => (
+                            <div className={cx('search-result')} tabIndex="-1" {...attrs}>
+                                <PopperWrapper>
+                                    <h4 className={cx('search-title')}>Account</h4>
+                                    <AccountItem />
+                                </PopperWrapper>
+                                ˝
+                            </div>
+                        )}
+                    > */}
+                        <Button className={cx('more-btn')}>
+                            <FontAwesomeIcon icon={faEllipsisVertical} />
+                        </Button>
+                    {/* </Tippy> */}
                 </div>
             </div>
         </header>
